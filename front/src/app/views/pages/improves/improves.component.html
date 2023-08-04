@@ -1,0 +1,31 @@
+<div class="container">
+    <table mat-table [dataSource]="improves" class="mat-elevation-z8">
+        <ng-container matColumnDef="assignee">
+            <th mat-header-cell *matHeaderCellDef> #Assignee </th>
+            <td mat-cell *matCellDef="let improve"> {{improve.assignee}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="summary">
+            <th mat-header-cell *matHeaderCellDef> #Summary </th>
+            <td mat-cell *matCellDef="let improve"> {{improve.summary}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="department">
+            <th mat-header-cell *matHeaderCellDef> #Department </th>
+            <td mat-cell *matCellDef="let improve"> {{improve.department.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="majorbenefit">
+            <th mat-header-cell *matHeaderCellDef> #Majorbenefit </th>
+            <td mat-cell *matCellDef="let improve"> {{improve.majorBenefits.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> #Status </th>
+            <td mat-cell *matCellDef="let improve"> {{improve.statusImprovement ? 'Approved' : 'Peeding' }} </td>
+        </ng-container>
+
+        <tr  mat-header-row class="header"  class="table-header" *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

@@ -1,0 +1,8 @@
+#main-container{
+width: 100%;
+}
+button{
+    border-radius: 0;
+    margin-right: 10px;
+    width: 180px;
+}

@@ -1,0 +1,1 @@
+export const FTE = 176

@@ -1,0 +1,31 @@
+<div id="top-container">
+    <img id="supergraphic">
+    <div id="components-container">
+        <div id="top-components">
+            <span class="top-titles">Plataforma CIP GS-LA</span>
+            <span class="top-titles">GS / OIS-LA</span>
+
+            <div *ngIf="userService.VerifyUserLoged()" id="user-info" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../../../../assets/icon/my-brand-frame.svg" class="top-icon" alt="">
+                <span id="username-top"> {{userService.userLoged?.userName | uppercase }} </span>
+                <ul class="dropdown-menu">
+                    <li><button class="dropdown-item" (click)="logout()">Logout</button></li>
+                </ul>
+            </div>
+
+            <img class="bosch-logo" src="../../../../assets/images/BoschLogo.png" alt="">
+        </div>
+        <!-- -->
+        <div id="bottom-components" *ngIf="userService.VerifyUserLoged()" >
+            <a  class="action-link" routerLink="/improves-peeding"
+                routerLinkActive="active-link" *ngIf="userService.verifyAdminPermission()">Improves Peeding</a>
+
+            <a  class="action-link" routerLink="/create"
+                routerLinkActive="active-link">Create Improve</a>
+            <a  class="action-link" routerLink="/improves"
+                routerLinkActive="active-link">My Improves</a>
+            <a  class="action-link" routerLink="/create-admin" *ngIf="userService.verifyAdminPermission()"
+                routerLinkActive="active-link">Add Admin</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="sing-container">
+    <div class="singin-container">
+
+        <form [formGroup]="formSignIn" (ngSubmit)="confirmLogin()">
+            <div class="form" >
+                <h2>Sign In</h2>
+                <br>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Username</mat-label>
+                    <input matInput formControlName="userName">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <mat-label>Password</mat-label>
+                    <div id="password-field">
+                        <input matInput formControlName="password" [type]="passwordFieldControl">
+                        <i *ngIf="passwordFieldControl == 'password'"  (click)="showPassord()" class="fa-solid fa-eye fa-lg" style="margin-top: 7px; color: #030303;"></i>
+                        <i *ngIf="passwordFieldControl == 'text'"  (click)="hidePassord()" class="fa-solid fa-eye-slash fa-lg"  style="margin-top: 7px; color: #000000;"></i>
+                    </div>
+                </mat-form-field>
+ 
+                <button class="btn btn-primary" [disabled]="!formSignIn.valid"> Login </button>
+                <span>If you don't have a register <a (click)="openSignUpModal()" id="link-signup">Click Here</a></span>
+            </div>
+
+        </form>
+    </div>
+</div>

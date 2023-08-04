@@ -1,0 +1,39 @@
+#password-field{
+    display: flex;
+}
+.sing-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.singup-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border-right: 2px dashed #999;
+
+
+}
+.singin-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.example-full-width{
+    width: 100%;
+}
+button{
+    border-radius: 0;
+}
+#link-signup{
+    cursor: pointer;
+    color: #129812;
+}
+i{
+    cursor: pointer;
+}
